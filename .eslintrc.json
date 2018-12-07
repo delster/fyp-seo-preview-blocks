@@ -45,7 +45,6 @@
 		"eol-last": "error",
 		"eqeqeq": "error",
 		"func-call-spacing": "error",
-		"indent": ["error", "tab", { "SwitchCase": 1 }],
 		"jsx-a11y/label-has-for": [
 			"error",
 			{
@@ -57,7 +56,6 @@
 		"jsx-a11y/role-has-required-aria-props": "off",
 		"jsx-quotes": "error",
 		"key-spacing": "error",
-		"keyword-spacing": "error",
 		"lines-around-comment": "off",
 		"no-alert": "error",
 		"no-bitwise": "error",
@@ -144,7 +142,6 @@
 		"no-unreachable": "error",
 		"no-unsafe-negation": "error",
 		"no-unused-expressions": "error",
-		"no-unused-vars": "error",
 		"no-useless-computed-key": "error",
 		"no-useless-constructor": "error",
 		"no-useless-return": "error",
@@ -174,7 +171,6 @@
 		"semi-spacing": "error",
 		"space-before-blocks": ["error", "always"],
 		"space-before-function-paren": ["error", "never"],
-		"space-in-parens": ["error", "always"],
 		"space-infix-ops": ["error", { "int32Hint": false }],
 		"space-unary-ops": [
 			"error",
@@ -185,7 +181,6 @@
 			}
 		],
 		"template-curly-spacing": ["error", "always"],
-		"valid-jsdoc": ["error", { "requireReturn": false }],
 		"valid-typeof": "error",
 		"yoda": "off"
 	}

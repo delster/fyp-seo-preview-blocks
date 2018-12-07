@@ -1,5 +1,5 @@
 /**
- * BLOCK: fyp-seo-preview-blocks
+ * BLOCK: fyp-seo-preview-youtube-block
  *
  * Registering a basic block with Gutenberg.
  * Simple block, renders and saves the same content without any interactivity.
@@ -25,14 +25,13 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'fyp/seo-preview-block', {
+registerBlockType( 'fyp/seo-preview-youtube-block', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'SEO Previews' ), // Block title.
-	icon: 'chart-line', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
+	title: __( 'YouTube Previews' ), // Block title.
+	icon: 'format-video', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
 	category: 'embed', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
-		__( 'SEO' ),
-		__( 'SEO Preview' ),
+		__( 'YouTube Preview' ),
 		__( 'FYP' ),
 		__( 'Fuel Your Photos' ),
 	],
@@ -45,11 +44,10 @@ registerBlockType( 'fyp/seo-preview-block', {
 	 *
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
-	edit: function( props ) {
-		// Creates a <p class='wp-block-cgb-block-fyp-seo-preview-blocks'></p>.
+	edit: props => {
 		return (
 			<div className={ props.className }>
-				<p>This is where the backend output will go.</p>
+				<p>This is the backend output for the YouTube preview block.</p>
 			</div>
 		);
 	},
@@ -62,11 +60,14 @@ registerBlockType( 'fyp/seo-preview-block', {
 	 *
 	 * @link https://wordpress.org/gutenberg/handbook/block-api/block-edit-save/
 	 */
-	save: function( props ) {
+	save: props => {
 		return (
 			<div>
-				<p>This is where the frontend output will go.</p>
+				<p>This is the frontend output for the YouTube preview block.</p>
 			</div>
 		);
 	},
-} );
+});
+
+// Hold this for me, block:
+const truncWords = ( str, maxLen ) => ( ! str || str.length <= maxLen ) ? str : str.substr( 0, str.lastIndexOf( ' ', maxLen ) );

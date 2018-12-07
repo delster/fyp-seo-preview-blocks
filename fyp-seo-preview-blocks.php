@@ -3,13 +3,13 @@
  * Plugin Name: Fuel Your Photos SEO Preview Blocks
  * Plugin URI: https://github.com/delster/fyp-seo-preview-blocks
  * Description: Gutenberg Blocks for SERP previews (pages, YouTube videos, etc)
- * Author: David elster
+ * Author: David Elster
  * Author URI: https://github.com/delster/
  * Version: 1.0.0
- * License: GPL2+
- * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
+ * License: MIT
+ * License URI: https://opensource.org/licenses/MIT
  *
- * @package fyp
+ * @package fyp-seo-preview
  */
 
 // Exit if accessed directly.
