@@ -13,7 +13,7 @@ const { __ } = wp.i18n; // Import __() from wp.i18n
 const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.blocks
 
 /**
- * Register: aa Gutenberg Block.
+ * Register: a Gutenberg Block.
  *
  * Registers a new block provided a unique name and an object defining its
  * behavior. Once registered, the block is made editor as an option to any
@@ -25,15 +25,16 @@ const { registerBlockType } = wp.blocks; // Import registerBlockType() from wp.b
  * @return {?WPBlock}          The block, if it has been successfully
  *                             registered; otherwise `undefined`.
  */
-registerBlockType( 'cgb/block-fyp-seo-preview-blocks', {
+registerBlockType( 'fyp/seo-preview-block', {
 	// Block name. Block names must be string that contains a namespace prefix. Example: my-plugin/my-custom-block.
-	title: __( 'fyp-seo-preview-blocks - CGB Block' ), // Block title.
-	icon: 'shield', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
-	category: 'common', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
+	title: __( 'SEO Previews' ), // Block title.
+	icon: 'chart-line', // Block icon from Dashicons → https://developer.wordpress.org/resource/dashicons/.
+	category: 'embed', // Block category — Group blocks together based on common traits E.g. common, formatting, layout widgets, embed.
 	keywords: [
-		__( 'fyp-seo-preview-blocks — CGB Block' ),
-		__( 'CGB Example' ),
-		__( 'create-guten-block' ),
+		__( 'SEO' ),
+		__( 'SEO Preview' ),
+		__( 'FYP' ),
+		__( 'Fuel Your Photos' ),
 	],
 
 	/**
@@ -48,18 +49,7 @@ registerBlockType( 'cgb/block-fyp-seo-preview-blocks', {
 		// Creates a <p class='wp-block-cgb-block-fyp-seo-preview-blocks'></p>.
 		return (
 			<div className={ props.className }>
-				<p>— Hello from the backend.</p>
-				<p>
-					CGB BLOCK: <code>fyp-seo-preview-blocks</code> is a new Gutenberg block
-				</p>
-				<p>
-					It was created via{ ' ' }
-					<code>
-						<a href="https://github.com/ahmadawais/create-guten-block">
-							create-guten-block
-						</a>
-					</code>.
-				</p>
+				<p>This is where the backend output will go.</p>
 			</div>
 		);
 	},
@@ -75,18 +65,7 @@ registerBlockType( 'cgb/block-fyp-seo-preview-blocks', {
 	save: function( props ) {
 		return (
 			<div>
-				<p>— Hello from the frontend.</p>
-				<p>
-					CGB BLOCK: <code>fyp-seo-preview-blocks</code> is a new Gutenberg block.
-				</p>
-				<p>
-					It was created via{ ' ' }
-					<code>
-						<a href="https://github.com/ahmadawais/create-guten-block">
-							create-guten-block
-						</a>
-					</code>.
-				</p>
+				<p>This is where the frontend output will go.</p>
 			</div>
 		);
 	},
